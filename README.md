@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Recurring Event Instance Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application to define recurring event rules (daily or weekly) and generate event instances within a specified date range. Users can specify the start date, event time, recurrence pattern, number of occurrences, and a view window to filter and display generated event instances. Instances outside the view window are highlighted visually.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- *Daily or Weekly recurrence* support
+- Specify event start date and time
+- Select the day of the week (for weekly recurrence)
+- Input number of occurrences to generate
+- Define a view window (start & end dates) to filter visible event instances
+- Highlights instances outside the view window instead of hiding them
+- User input validation with friendly error messages
+- Reset form to clear inputs quickly
+- Export generated instances to CSV for easy sharing or import to other tools
+- Clean, responsive UI with basic styling for clarity
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+(Optional: add a screenshot or link to a live demo if hosted)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (>=14.x recommended)
+- npm (comes with Node.js) or yarn
 
-### `npm run build`
+### Running the App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will launch the app in your default browser at http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Enter the event start date and time.
+2. Choose recurrence: Daily or Weekly.
+3. If Weekly is selected, pick the day of the week.
+4. Specify the number of occurrences you want to generate.
+5. Set the view window start and end dates.
+6. Click *Generate Instances* to see the recurring events.
+7. Events outside the view window will be shown in gray with a label.
+8. Use the *Reset* button to clear all inputs.
+9. Click *Download CSV* to export the generated events.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- src/App.js - Main app container handling state and logic.
+- src/components/EventForm.js - Form component to collect user inputs.
+- src/components/InstanceList.js - Displays the list of event instances.
+- src/App.css - Basic styling for UI clarity.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Notes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- The app uses the date-fns library for date operations.
+- Authentication and backend features are not included; this is a frontend-focused tool.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions, suggestions, and improvements are welcome! Feel free to open issues or submit pull requests.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is open-source under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Developed by Saurabh Kumar*  
